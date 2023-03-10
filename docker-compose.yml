@@ -1,0 +1,11 @@
+version: "3"
+services:
+    devenv:
+        image: devenv:1.0.0
+        network_mode: "host"
+        volumes:
+            - "./develop:/home/develop"
+#            - ".:/app"
+#        ports:
+#            - "4300:80"
+#        restart: always

@@ -16,7 +16,8 @@ ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 RUN node -v
 RUN npm -v
+RUN npm install -g @ionic/cli native-run cordova-res
+RUN apt-get install nano -y
 RUN mkdir -p /home/develop
 WORKDIR /home/develop
-RUN npm install -g @ionic/cli native-run cordova-res
 ENTRYPOINT ["tail", "-f", "/dev/null"]
